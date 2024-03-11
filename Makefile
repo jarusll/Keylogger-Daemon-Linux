@@ -5,14 +5,14 @@ name=kblog
 all: keylogger
 
 keylogger: keylogger.o
-	gcc -o keylogger keylogger.o
+	gcc -g -o keylogger keylogger.o
 	chmod 755 keylogger
 	mkdir -p bin/
 	mv keylogger.o bin/
 	mv keylogger bin/
 
 keylogger.o: src/keylogger.c src/keylogger.h
-	gcc -DEVENT_NUMBER=\"$(event)\" -DDAEMON_NAME=\"$(name)\" -c src/keylogger.c
+	gcc -g -DEVENT_NUMBER=\"$(event)\" -DDAEMON_NAME=\"$(name)\" -c src/keylogger.c
 
 .PHONY: install
 install:
